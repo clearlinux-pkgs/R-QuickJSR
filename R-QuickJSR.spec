@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-QuickJSR
-Version  : 1.0.5
-Release  : 1
-URL      : https://cran.r-project.org/src/contrib/QuickJSR_1.0.5.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/QuickJSR_1.0.5.tar.gz
+Version  : 1.0.6
+Release  : 2
+URL      : https://cran.r-project.org/src/contrib/QuickJSR_1.0.6.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/QuickJSR_1.0.6.tar.gz
 Summary  : Interface for the 'QuickJS' Lightweight 'JavaScript' Engine
 Group    : Development/Tools
 License  : MIT
@@ -43,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694192660
+export SOURCE_DATE_EPOCH=1694625145
 
 %install
-export SOURCE_DATE_EPOCH=1694192660
+export SOURCE_DATE_EPOCH=1694625145
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
