@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-QuickJSR
-Version  : 1.0.6
-Release  : 2
-URL      : https://cran.r-project.org/src/contrib/QuickJSR_1.0.6.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/QuickJSR_1.0.6.tar.gz
+Version  : 1.0.7
+Release  : 3
+URL      : https://cran.r-project.org/src/contrib/QuickJSR_1.0.7.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/QuickJSR_1.0.7.tar.gz
 Summary  : Interface for the 'QuickJS' Lightweight 'JavaScript' Engine
 Group    : Development/Tools
 License  : MIT
@@ -43,19 +43,19 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694625145
+export SOURCE_DATE_EPOCH=1697475333
 
 %install
-export SOURCE_DATE_EPOCH=1694625145
+export SOURCE_DATE_EPOCH=1697475333
 rm -rf %{buildroot}
-export LANG=C.UTF-8
-export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
-export AR=gcc-ar
-export RANLIB=gcc-ranlib
-export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
+LANG=C.UTF-8
+CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
+FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -O3 -flto -fno-semantic-interposition "
+AR=gcc-ar
+RANLIB=gcc-ranlib
+LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
 
 mkdir -p ~/.R
@@ -118,11 +118,12 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/QuickJSR/include/quickjs-libc.h
 /usr/lib64/R/library/QuickJSR/include/quickjs-opcode.h
 /usr/lib64/R/library/QuickJSR/include/quickjs.h
-/usr/lib64/R/library/QuickJSR/include/unicode_gen_def.h
 /usr/lib64/R/library/QuickJSR/lib/libquickjs.a
 /usr/lib64/R/library/QuickJSR/tests/testthat.R
 /usr/lib64/R/library/QuickJSR/tests/testthat/test-JSContext.R
 /usr/lib64/R/library/QuickJSR/tests/testthat/test-qjs_eval.R
+/usr/lib64/R/library/QuickJSR/unicode_gen/unicode_gen.c
+/usr/lib64/R/library/QuickJSR/unicode_gen/unicode_gen_def.h
 
 %files lib
 %defattr(-,root,root,-)
