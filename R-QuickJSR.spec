@@ -7,7 +7,7 @@
 #
 Name     : R-QuickJSR
 Version  : 1.1.3
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/QuickJSR_1.1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/QuickJSR_1.1.3.tar.gz
 Summary  : Interface for the 'QuickJS' Lightweight 'JavaScript' Engine
